@@ -1,0 +1,57 @@
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+$body-color: cornflowerblue;
+$title-color: green;
+
+body {
+  background-color: $body-color;
+}
+
+img {
+  width: 400px;
+}
+
+.title {
+  font-family: 'Yellowtail', cursive;
+  font-size: 30px;
+  color: $title-color;
+
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
+
+%block-shared {
+  margin: 30px;
+  width: 45px;
+  height: 45px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.digit {
+  @extend %block-shared;
+  color: burlywood;
+
+  &:hover {
+    color: red;
+    background-color: burlywood;
+  }
+}
+
+.digit1 {
+  @extend %block-shared;
+  color: red;
+
+  &:hover {
+    color: burlywood;
+    background-color: red;
+  }
+}
