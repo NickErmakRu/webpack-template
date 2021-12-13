@@ -18,6 +18,7 @@ const App = () => {
       <div style={{display: "flex"}}>
         <div className="digit">{lodashExample[0][0]}</div>
         <div className="digit1">{lodashExample[0][1]}</div>
+        <div className="digit1">7</div>
       </div>
     </div>
   )
