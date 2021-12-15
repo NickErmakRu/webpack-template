@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const {BundleAnalyzerPlugin} = require("webpack-bundle-analyzer");
 
@@ -48,6 +49,14 @@ const getPlugins = () => {
         filename: "main-[contenthash:8].css"
       }),
       new BundleAnalyzerPlugin()
+    );
+  }
+
+  if (isDev) {
+    plugins.push(
+      new ESLintPlugin({
+        extensions: ["js", "jsx"]
+      }),
     );
   }
 

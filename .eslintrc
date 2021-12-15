@@ -1,0 +1,41 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 11, // версия стандарта JavaScript. Последний 12 (2021).
+    "sourceType": "module" // Позволяет использовать import/export
+  },  
+  "env": {
+    "browser": true,
+    "es2021": true 
+  },
+  "plugins": [
+    "react-hooks",
+    "react", 
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }], // Обязательно!! Подсвечивает ошибки из Prettier
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "no-unused-vars": "warn",
+    "eqeqeq": "warn",
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "double"],
+    "jsx-quotes": ["warn", "prefer-double"]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}
