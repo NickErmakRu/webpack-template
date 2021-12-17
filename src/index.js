@@ -11,9 +11,8 @@ import CustomComponent from "./components/component.jsx";
 const App = () => {
   const lodashExample = _.partition([1, 2, 3, 4], (n) => n % 2);
 
-  const testText = (text) => console.log(text);
-
-  testText("osfkokos");
+  const huskyTest = (text) => console.log(text);
+  huskyTest("huskyTest");
 
   return (
     <div>

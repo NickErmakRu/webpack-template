@@ -5,9 +5,8 @@ const CustomComponent = () => {
   console.log("JSX component is here");
   console.log([1, 2, [2, 3]].flat());
 
-  const testText = (text) => console.log(text);
-
-  testText("osfkokos FOR JSX");
+  const huskyTest = (text) => console.log(text);
+  huskyTest("huskyTest FOR JSX");
 
   return (
     <div className="componentStyle">
