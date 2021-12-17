@@ -10,6 +10,18 @@
     "prod": "cross-env NODE_ENV=production webpack",
     "stats": "cross-env NODE_ENV=production webpack --json > stats.json && webpack-bundle-analyzer stats.json"
   },
+  "husky": {    
+    "hooks": {      
+      "pre-commit": "lint-staged" 
+    }  
+  },
+  "lint-staged": {    
+    "src/**/*.(js|jsx)": [
+      "eslint --fix --ext .js,.jsx", 
+      "prettier --write",
+      "git add"
+    ]  
+  },
   "keywords": [
     "webpack",
     "react"

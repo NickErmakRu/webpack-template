@@ -11,6 +11,10 @@ import CustomComponent from "./components/component.jsx";
 const App = () => {
   const lodashExample = _.partition([1, 2, 3, 4], (n) => n % 2);
 
+  const testText = (text) => console.log(text);
+
+  testText("osfkokos");
+
   return (
     <div>
       <p className="title">Template settings in progress</p>
